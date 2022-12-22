@@ -13,14 +13,13 @@ on:
  
 jobs: 
 
-  my_ci_part:
-  
-    ruans-on: ubuntu-latest
+   my_ci_part:
+     ruans-on: ubuntu-latest
     
-    steps:
-    - name: Git clon our repo
-      uses: actions/checkout@v1
-    - name: Create ZIP delpoiment package
-      run : zip -r ${{env.DEPLOY_PACKAGE_NAME}} ./ -x *git.* 
+     steps:
+     - name: Git clon our repo
+       uses: actions/checkout@v1
+     - name: Create ZIP delpoiment package
+       run : zip -r ${{env.DEPLOY_PACKAGE_NAME}} ./ -x *git.* 
       
       
